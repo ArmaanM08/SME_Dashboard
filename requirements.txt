@@ -6,3 +6,5 @@ scikit-learn
 joblib
 streamlit
 jupyterlab
+altair>=4.0.0
+vega_datasets
