@@ -5,4 +5,5 @@ matplotlib
 scikit-learn
 joblib
 streamlit
-Pillow==9.5.0
+# Pillow removed to avoid source builds on newer Python versions (e.g. 3.14)
+# Add Pillow back only if your app needs image handling and a compatible wheel exists.
