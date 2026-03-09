@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SME Credit Risk Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="p-4">
+    <div class="container">
+      <h1>SME Credit Risk Predictor</h1>
+      <p class="text-muted">Static frontend with serverless prediction endpoint.</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <form id="predict-form">
+            <div class="mb-2">
+              <label class="form-label">Annual revenue</label>
+              <input class="form-control" name="annual_revenue" value="5000000">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Monthly transactions</label>
+              <input class="form-control" name="monthly_transactions" value="800">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Average transaction value</label>
+              <input class="form-control" name="avg_transaction_value" value="3000">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">GST compliance score (0-1)</label>
+              <input class="form-control" name="gst_compliance_score" value="0.7">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">UPI transaction ratio (0-1)</label>
+              <input class="form-control" name="upi_transaction_ratio" value="0.4">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Cashflow stability (0-1)</label>
+              <input class="form-control" name="cashflow_stability" value="0.6">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Repayment history score (0-1)</label>
+              <input class="form-control" name="repayment_history_score" value="0.7">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Previous loan defaults</label>
+              <input class="form-control" name="previous_loan_defaults" value="0">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Years in business</label>
+              <input class="form-control" name="years_in_business" value="8">
+            </div>
+            <div class="mb-2">
+              <label class="form-label">Debt-to-revenue ratio</label>
+              <input class="form-control" name="debt_to_revenue_ratio" value="0.5">
+            </div>
+
+            <button class="btn btn-primary" type="submit">Predict</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="result" class="border rounded p-3">
+            <h4>Prediction</h4>
+            <div id="output">No prediction yet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

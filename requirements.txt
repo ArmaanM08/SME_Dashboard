@@ -4,9 +4,5 @@ seaborn
 matplotlib
 scikit-learn
 joblib
-streamlit
-# Pillow removed to avoid source builds on newer Python versions (e.g. 3.14)
-# Add Pillow back only if your app needs image handling and a compatible wheel exists.
-# Pin Altair/Vega to versions compatible with Streamlit's Altair v4 API
-altair==4.2.2
-vega_datasets==0.9.0
+flask
+# Streamlit removed; this app now uses a static frontend + serverless function / Flask server
