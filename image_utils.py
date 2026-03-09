@@ -1,7 +1,7 @@
 """
-Lightweight imghdr shim for environments missing the stdlib imghdr.
-Provides a minimal `what(file, h=None)` implementation covering common types.
-This file is intentionally simple and intended for deployment compatibility only.
+Lightweight image header detection utilities.
+This module replaces the previous local `imghdr.py` shim to avoid
+shadowing the standard-library `imghdr` module.
 """
 from typing import Optional
 
