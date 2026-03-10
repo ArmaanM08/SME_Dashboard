@@ -46,5 +46,13 @@ def predict():
     return jsonify({'predicted_default_probability': pred, 'risk_category': risk})
 
 
+# Netlify function compatibility route (local dev)
+@app.route('/.netlify/functions/predict', methods=['POST', 'OPTIONS'])
+def netlify_function_predict():
+    if request.method == 'OPTIONS':
+        return ('', 200)
+    return predict()
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8501, debug=True)
