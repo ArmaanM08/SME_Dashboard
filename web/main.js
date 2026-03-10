@@ -5,6 +5,16 @@ async function postPredict(payload) {
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(payload)
   });
+  // handle non-OK and non-JSON responses to avoid "Unexpected token '<'" errors
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Request failed ${res.status}: ${text}`);
+  }
+  const contentType = res.headers.get('content-type') || '';
+  if (!contentType.includes('application/json')) {
+    const text = await res.text();
+    throw new Error(`Unexpected response content-type: ${contentType} -- ${text}`);
+  }
   return res.json();
 }
 
