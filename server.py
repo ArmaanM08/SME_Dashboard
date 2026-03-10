@@ -54,5 +54,5 @@ def netlify_function_predict():
     return predict()
 
 
-if __name__ == '__main__':
+if __name__ == '__index__':
     app.run(host='0.0.0.0', port=8501, debug=True)
