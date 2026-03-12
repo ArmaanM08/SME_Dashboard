@@ -4,5 +4,6 @@ seaborn
 matplotlib
 scikit-learn
 joblib
-streamlit
+altair<5
+streamlit>=1.35.0
 plotly
