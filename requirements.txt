@@ -4,5 +4,5 @@ seaborn
 matplotlib
 scikit-learn
 joblib
-flask
-# Streamlit removed; this app now uses a static frontend + serverless function / Flask server
+streamlit
+plotly
